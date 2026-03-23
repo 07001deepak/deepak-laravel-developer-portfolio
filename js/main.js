@@ -2,7 +2,7 @@
    Deepak Chandru S - Portfolio JavaScript
    Animations, Interactions & Effects
    ======================================== */
-
+document.getElementById("year").textContent = new Date().getFullYear();
 document.addEventListener('DOMContentLoaded', () => {
     // Initialize all modules
     initParticles();
