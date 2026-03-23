@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deepak Chandru S | Laravel Developer Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Cursor Glow -->
+    <div class="cursor-glow" id="cursorGlow"></div>
+
+    <!-- Particle Canvas -->
+    <canvas id="particleCanvas"></canvas>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#hero" class="nav-logo">
+                <span class="logo-bracket">&lt;</span>DC<span class="logo-bracket">/&gt;</span>
+            </a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#hero" class="nav-link active">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#experience" class="nav-link">Experience</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#education" class="nav-link">Education</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+                <li><a href="resume.html" class="nav-link nav-resume"><i class="fas fa-file-alt"></i> Resume</a></li>
+            </ul>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero">
+        <div class="hero-content">
+            <div class="hero-text">
+                <div class="hero-greeting" data-aos="fade-up">
+                    <span class="greeting-line"></span>
+                    <span class="greeting-text">Hello, I'm</span>
+                </div>
+                <h1 class="hero-name" data-aos="fade-up" data-delay="100">
+                    Deepak<br><span class="name-highlight">Chandru S</span>
+                </h1>
+                <div class="hero-typewriter" data-aos="fade-up" data-delay="200">
+                    <span class="typewriter-prefix">$</span>
+                    <span class="typewriter-text" id="typewriter"></span>
+                    <span class="typewriter-cursor">|</span>
+                </div>
+                <p class="hero-description" data-aos="fade-up" data-delay="300">
+                    A results-oriented <strong>Laravel Full-Stack Developer</strong> with <strong>2.5+ years</strong> of experience 
+                    building high-performance web applications, RESTful APIs, and dynamic solutions.
+                </p>
+                <div class="hero-buttons" data-aos="fade-up" data-delay="400">
+                    <a href="#projects" class="btn btn-primary">
+                        <i class="fas fa-rocket"></i> View My Work
+                    </a>
+                    <a href="resume.html" class="btn btn-outline">
+                        <i class="fas fa-file-alt"></i> View Resume
+                    </a>
+                </div>
+                <div class="hero-stats" data-aos="fade-up" data-delay="500">
+                    <div class="stat-item">
+                        <span class="stat-number" data-count="2.5">0</span><span class="stat-suffix">+</span>
+                        <span class="stat-label">Years Experience</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number" data-count="10">0</span><span class="stat-suffix">+</span>
+                        <span class="stat-label">Projects Delivered</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number" data-count="15">0</span><span class="stat-suffix">+</span>
+                        <span class="stat-label">Technologies</span>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-visual" data-aos="fade-left" data-delay="300">
+                <div class="code-window">
+                    <div class="code-header">
+                        <div class="code-dots">
+                            <span class="dot red"></span>
+                            <span class="dot yellow"></span>
+                            <span class="dot green"></span>
+                        </div>
+                        <span class="code-title">deepak.php</span>
+                    </div>
+                    <div class="code-body">
+                        <pre><code><span class="code-keyword">class</span> <span class="code-class">Developer</span> <span class="code-keyword">extends</span> <span class="code-class">Deepak</span>
+{
+    <span class="code-keyword">public</span> <span class="code-variable">$name</span> = <span class="code-string">'Deepak Chandru S'</span>;
+    <span class="code-keyword">public</span> <span class="code-variable">$role</span> = <span class="code-string">'Laravel Developer'</span>;
+    <span class="code-keyword">public</span> <span class="code-variable">$experience</span> = <span class="code-string">'2.5+ years'</span>;
+
+    <span class="code-keyword">public function</span> <span class="code-function">skills</span>(): <span class="code-class">array</span>
+    {
+        <span class="code-keyword">return</span> [
+            <span class="code-string">'Laravel'</span>,
+            <span class="code-string">'PHP 8+'</span>,
+            <span class="code-string">'MySQL'</span>,
+            <span class="code-string">'REST APIs'</span>,
+            <span class="code-string">'JavaScript'</span>,
+        ];
+    }
+}</code></pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="mouse">
+                <div class="wheel"></div>
+            </div>
+            <span>Scroll Down</span>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section about">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag"><i class="fas fa-user"></i> About Me</span>
+                <h2 class="section-title">Passionate About Crafting<br><span class="highlight">Digital Solutions</span></h2>
+            </div>
+            <div class="about-grid">
+                <div class="about-image-wrapper">
+                    <div class="about-avatar">
+                        <div class="avatar-inner">
+                            <i class="fas fa-code avatar-icon"></i>
+                        </div>
+                        <div class="avatar-ring"></div>
+                        <div class="avatar-ring avatar-ring-2"></div>
+                    </div>
+                    <div class="about-badges">
+                        <div class="badge-item">
+                            <i class="fab fa-laravel"></i>
+                            <span>Laravel Expert</span>
+                        </div>
+                        <div class="badge-item">
+                            <i class="fab fa-php"></i>
+                            <span>PHP 8+</span>
+                        </div>
+                        <div class="badge-item">
+                            <i class="fas fa-database"></i>
+                            <span>MySQL</span>
+                        </div>
+                        <div class="badge-item">
+                            <i class="fas fa-server"></i>
+                            <span>Server Mgmt</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-content">
+                    <p class="about-text">
+                        I'm a <strong>BE graduate in Electronics and Communication Engineering</strong> who found my true passion in web development. 
+                        With <strong>2.5+ years of hands-on experience</strong>, I specialize in building robust, scalable web applications using 
+                        the <strong>Laravel framework</strong>.
+                    </p>
+                    <p class="about-text">
+                        My expertise spans across the full development lifecycle — from designing elegant database architectures and building 
+                        RESTful APIs to deploying applications on Linux servers. I'm skilled in <strong>front-end and back-end technologies</strong> 
+                        including PHP (Laravel v8–v11), MySQL, JavaScript, and modern deployment tools.
+                    </p>
+                    <p class="about-text">
+                        I'm adept at <strong>authentication & security</strong> (Passport, Sanctum, JWT), <strong>queue management</strong>, 
+                        <strong>task scheduling</strong>, and <strong>server management</strong> with cPanel, Nginx, and Apache. I thrive on solving 
+                        complex problems and delivering high-performance solutions.
+                    </p>
+                    <div class="about-info-grid">
+                        <div class="info-item">
+                            <span class="info-label"><i class="fas fa-map-marker-alt"></i> Location</span>
+                            <span class="info-value">India</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label"><i class="fas fa-graduation-cap"></i> Degree</span>
+                            <span class="info-value">BE (ECE)</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label"><i class="fas fa-briefcase"></i> Experience</span>
+                            <span class="info-value">2.5+ Years</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label"><i class="fas fa-language"></i> Languages</span>
+                            <span class="info-value">English, Tamil</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="section skills">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag"><i class="fas fa-cogs"></i> Skills & Expertise</span>
+                <h2 class="section-title">My Technical<br><span class="highlight">Arsenal</span></h2>
+            </div>
+            <div class="skills-categories">
+                <!-- Backend Development -->
+                <div class="skill-category">
+                    <div class="category-header">
+                        <div class="category-icon">
+                            <i class="fas fa-server"></i>
+                        </div>
+                        <h3>Backend Development</h3>
+                    </div>
+                    <div class="skill-tags">
+                        <span class="skill-tag featured"><i class="fab fa-laravel"></i> Laravel (v8–v11)</span>
+                        <span class="skill-tag"><i class="fab fa-php"></i> PHP 8+</span>
+                        <span class="skill-tag"><i class="fas fa-cube"></i> Composer</span>
+                        <span class="skill-tag"><i class="fas fa-box"></i> Eloquent ORM</span>
+                        <span class="skill-tag"><i class="fas fa-cog"></i> Blade Templating</span>
+                        <span class="skill-tag"><i class="fas fa-tasks"></i> Queue Management</span>
+                        <span class="skill-tag"><i class="fas fa-clock"></i> Task Scheduling</span>
+                    </div>
+                </div>
+                <!-- API Development -->
+                <div class="skill-category">
+                    <div class="category-header">
+                        <div class="category-icon">
+                            <i class="fas fa-plug"></i>
+                        </div>
+                        <h3>API Development</h3>
+                    </div>
+                    <div class="skill-tags">
+                        <span class="skill-tag featured"><i class="fas fa-exchange-alt"></i> RESTful APIs</span>
+                        <span class="skill-tag"><i class="fas fa-code"></i> JSON</span>
+                        <span class="skill-tag"><i class="fas fa-code-branch"></i> API Versioning</span>
+                        <span class="skill-tag"><i class="fas fa-tachometer-alt"></i> Rate Limiting</span>
+                    </div>
+                </div>
+                <!-- Auth & Security -->
+                <div class="skill-category">
+                    <div class="category-header">
+                        <div class="category-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <h3>Authentication & Security</h3>
+                    </div>
+                    <div class="skill-tags">
+                        <span class="skill-tag featured"><i class="fas fa-key"></i> Laravel Passport</span>
+                        <span class="skill-tag"><i class="fas fa-lock"></i> Sanctum</span>
+                        <span class="skill-tag"><i class="fas fa-fingerprint"></i> JWT</span>
+                        <span class="skill-tag"><i class="fas fa-shield-alt"></i> CSRF</span>
+                    </div>
+                </div>
+                <!-- Database -->
+                <div class="skill-category">
+                    <div class="category-header">
+                        <div class="category-icon">
+                            <i class="fas fa-database"></i>
+                        </div>
+                        <h3>Database Management</h3>
+                    </div>
+                    <div class="skill-tags">
+                        <span class="skill-tag featured"><i class="fas fa-database"></i> MySQL</span>
+                        <span class="skill-tag"><i class="fas fa-project-diagram"></i> Query Optimization</span>
+                        <span class="skill-tag"><i class="fas fa-exchange-alt"></i> Migrations</span>
+                        <span class="skill-tag"><i class="fas fa-seedling"></i> Seeders</span>
+                        <span class="skill-tag"><i class="fas fa-sitemap"></i> Indexing</span>
+                    </div>
+                </div>
+                <!-- Frontend -->
+                <div class="skill-category">
+                    <div class="category-header">
+                        <div class="category-icon">
+                            <i class="fas fa-paint-brush"></i>
+                        </div>
+                        <h3>Frontend Development</h3>
+                    </div>
+                    <div class="skill-tags">
+                        <span class="skill-tag"><i class="fab fa-html5"></i> HTML5</span>
+                        <span class="skill-tag"><i class="fab fa-css3-alt"></i> CSS3</span>
+                        <span class="skill-tag"><i class="fab fa-js"></i> JavaScript</span>
+                        <span class="skill-tag"><i class="fab fa-bootstrap"></i> Bootstrap</span>
+                        <span class="skill-tag"><i class="fas fa-wind"></i> Tailwind CSS</span>
+                        <span class="skill-tag"><i class="fas fa-magic"></i> jQuery</span>
+                        <span class="skill-tag"><i class="fas fa-bolt"></i> AJAX</span>
+                        <span class="skill-tag"><i class="fas fa-puzzle-piece"></i> Livewire</span>
+                    </div>
+                </div>
+                <!-- DevOps & Hosting -->
+                <div class="skill-category">
+                    <div class="category-header">
+                        <div class="category-icon">
+                            <i class="fas fa-cloud"></i>
+                        </div>
+                        <h3>DevOps & Hosting</h3>
+                    </div>
+                    <div class="skill-tags">
+                        <span class="skill-tag"><i class="fab fa-linux"></i> Linux Servers</span>
+                        <span class="skill-tag"><i class="fas fa-server"></i> cPanel / WHM</span>
+                        <span class="skill-tag"><i class="fas fa-globe"></i> Nginx</span>
+                        <span class="skill-tag"><i class="fas fa-feather"></i> Apache</span>
+                        <span class="skill-tag"><i class="fab fa-git-alt"></i> Git</span>
+                        <span class="skill-tag"><i class="fab fa-github"></i> GitHub</span>
+                        <span class="skill-tag"><i class="fas fa-terminal"></i> SSH</span>
+                        <span class="skill-tag"><i class="fas fa-lock"></i> SSL</span>
+                    </div>
+                </div>
+                <!-- Tools -->
+                <div class="skill-category">
+                    <div class="category-header">
+                        <div class="category-icon">
+                            <i class="fas fa-tools"></i>
+                        </div>
+                        <h3>Tools & Platforms</h3>
+                    </div>
+                    <div class="skill-tags">
+                        <span class="skill-tag"><i class="fas fa-edit"></i> VS Code</span>
+                        <span class="skill-tag"><i class="fas fa-mail-bulk"></i> Postman</span>
+                        <span class="skill-tag"><i class="fab fa-figma"></i> Figma</span>
+                        <span class="skill-tag"><i class="fas fa-file-excel"></i> Laravel Excel</span>
+                        <span class="skill-tag"><i class="fas fa-file-pdf"></i> DomPDF</span>
+                        <span class="skill-tag"><i class="fas fa-credit-card"></i> Razorpay</span>
+                        <span class="skill-tag"><i class="fas fa-bell"></i> Firebase FCM</span>
+                        <span class="skill-tag"><i class="fas fa-sms"></i> Twilio / MSG91</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="section experience">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag"><i class="fas fa-briefcase"></i> Work Experience</span>
+                <h2 class="section-title">My Professional<br><span class="highlight">Journey</span></h2>
+            </div>
+            <div class="timeline">
+                <!-- Experience 1 -->
+                <div class="timeline-item">
+                    <div class="timeline-marker">
+                        <div class="marker-dot"></div>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <div class="timeline-company">
+                                <h3>Software Developer</h3>
+                                <span class="company-name"><i class="fas fa-building"></i> Developer Role</span>
+                            </div>
+                            <span class="timeline-date">
+                                <i class="fas fa-calendar-alt"></i> 2022 – Present
+                            </span>
+                        </div>
+                        <div class="timeline-body">
+                            <p>Specializing in Laravel full-stack development, building and maintaining dynamic web applications, RESTful APIs, and managing server infrastructure.</p>
+                            <ul class="timeline-highlights">
+                                <li><i class="fas fa-check-circle"></i> Developed and maintained multiple Laravel web applications (v8–v11)</li>
+                                <li><i class="fas fa-check-circle"></i> Built RESTful APIs with authentication (Passport, Sanctum, JWT)</li>
+                                <li><i class="fas fa-check-circle"></i> Managed Linux server deployments with Nginx/Apache</li>
+                                <li><i class="fas fa-check-circle"></i> Implemented payment gateways (Razorpay) and notification systems (Firebase FCM, Twilio)</li>
+                                <li><i class="fas fa-check-circle"></i> Optimized database queries and application performance</li>
+                                <li><i class="fas fa-check-circle"></i> Integrated third-party services and APIs</li>
+                            </ul>
+                            <div class="tech-stack">
+                                <span>Laravel</span>
+                                <span>PHP 8+</span>
+                                <span>MySQL</span>
+                                <span>REST API</span>
+                                <span>JavaScript</span>
+                                <span>Linux</span>
+                                <span>Git</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section projects">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag"><i class="fas fa-code"></i> Projects</span>
+                <h2 class="section-title">Things I've<br><span class="highlight">Built</span></h2>
+            </div>
+            <div class="projects-grid">
+                <!-- Project 1 -->
+                <div class="project-card">
+                    <div class="project-icon">
+                        <i class="fas fa-store"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3>E-Commerce Platform</h3>
+                        <p>Full-featured e-commerce solution with product management, cart system, payment integration (Razorpay), order tracking, and admin dashboard built on Laravel.</p>
+                        <div class="project-tech">
+                            <span>Laravel</span>
+                            <span>MySQL</span>
+                            <span>Razorpay</span>
+                            <span>Bootstrap</span>
+                            <span>REST API</span>
+                        </div>
+                    </div>
+                    <div class="project-overlay">
+                        <div class="project-number">01</div>
+                    </div>
+                </div>
+                <!-- Project 2 -->
+                <div class="project-card">
+                    <div class="project-icon">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3>API Backend for Mobile Apps</h3>
+                        <p>Designed and developed robust RESTful API backends for mobile applications with JWT authentication, push notifications via Firebase FCM, and SMS integration.</p>
+                        <div class="project-tech">
+                            <span>Laravel</span>
+                            <span>REST API</span>
+                            <span>JWT</span>
+                            <span>Firebase FCM</span>
+                            <span>Twilio</span>
+                        </div>
+                    </div>
+                    <div class="project-overlay">
+                        <div class="project-number">02</div>
+                    </div>
+                </div>
+                <!-- Project 3 -->
+                <div class="project-card">
+                    <div class="project-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3>Admin Dashboard & CMS</h3>
+                        <p>Built comprehensive admin panels with role-based access control, dynamic content management, report generation (DomPDF, Laravel Excel), and real-time analytics.</p>
+                        <div class="project-tech">
+                            <span>Laravel</span>
+                            <span>Livewire</span>
+                            <span>DomPDF</span>
+                            <span>Laravel Excel</span>
+                            <span>Chart.js</span>
+                        </div>
+                    </div>
+                    <div class="project-overlay">
+                        <div class="project-number">03</div>
+                    </div>
+                </div>
+                <!-- Project 4 -->
+                <div class="project-card">
+                    <div class="project-icon">
+                        <i class="fas fa-server"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3>Server Management & Deployment</h3>
+                        <p>Configured and managed Linux servers with Nginx/Apache, SSL certificates, SSH access, cron jobs, and automated deployment pipelines for production applications.</p>
+                        <div class="project-tech">
+                            <span>Linux</span>
+                            <span>Nginx</span>
+                            <span>Apache</span>
+                            <span>SSH</span>
+                            <span>SSL</span>
+                            <span>Git</span>
+                        </div>
+                    </div>
+                    <div class="project-overlay">
+                        <div class="project-number">04</div>
+                    </div>
+                </div>
+                <!-- Project 5 -->
+                <div class="project-card">
+                    <div class="project-icon">
+                        <i class="fas fa-bell"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3>Notification & Communication System</h3>
+                        <p>Integrated multi-channel notification system with Firebase push notifications, Twilio/MSG91 SMS, email notifications, and real-time event broadcasting.</p>
+                        <div class="project-tech">
+                            <span>Laravel</span>
+                            <span>Firebase FCM</span>
+                            <span>MSG91</span>
+                            <span>Queues</span>
+                            <span>Events</span>
+                        </div>
+                    </div>
+                    <div class="project-overlay">
+                        <div class="project-number">05</div>
+                    </div>
+                </div>
+                <!-- Project 6 -->
+                <div class="project-card">
+                    <div class="project-icon">
+                        <i class="fas fa-lock"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3>Authentication & Security Module</h3>
+                        <p>Developed comprehensive authentication systems with multi-guard setup, OAuth integration, role-based permissions, and advanced security features.</p>
+                        <div class="project-tech">
+                            <span>Laravel Passport</span>
+                            <span>Sanctum</span>
+                            <span>JWT</span>
+                            <span>CSRF</span>
+                            <span>OAuth</span>
+                        </div>
+                    </div>
+                    <div class="project-overlay">
+                        <div class="project-number">06</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="section education">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag"><i class="fas fa-graduation-cap"></i> Education</span>
+                <h2 class="section-title">Academic<br><span class="highlight">Background</span></h2>
+            </div>
+            <div class="education-grid">
+                <div class="education-card">
+                    <div class="edu-icon">
+                        <i class="fas fa-university"></i>
+                    </div>
+                    <div class="edu-content">
+                        <h3>Bachelor of Engineering</h3>
+                        <p class="edu-field">Electronics and Communication Engineering (ECE)</p>
+                        <p class="edu-description">
+                            Graduated with strong fundamentals in electronics, communication systems, and programming, which paved the way for a career in software development.
+                        </p>
+                    </div>
+                    <div class="edu-decoration">
+                        <i class="fas fa-award"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section contact">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag"><i class="fas fa-envelope"></i> Contact</span>
+                <h2 class="section-title">Let's Work<br><span class="highlight">Together</span></h2>
+                <p class="section-subtitle">Have a project in mind? Let's discuss how I can help bring your ideas to life.</p>
+            </div>
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-detail">
+                            <h4>Email</h4>
+                            <p>deepakchandru.dev@gmail.com</p>
+                        </div>
+                    </div>
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="contact-detail">
+                            <h4>Location</h4>
+                            <p>India</p>
+                        </div>
+                    </div>
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fas fa-code-branch"></i>
+                        </div>
+                        <div class="contact-detail">
+                            <h4>Availability</h4>
+                            <p>Open to opportunities</p>
+                        </div>
+                    </div>
+                    <div class="social-links">
+                        <a href="#" class="social-link" title="GitHub"><i class="fab fa-github"></i></a>
+                        <a href="#" class="social-link" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="social-link" title="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link" title="Stack Overflow"><i class="fab fa-stack-overflow"></i></a>
+                    </div>
+                </div>
+                <form class="contact-form" id="contactForm">
+                    <div class="form-group">
+                        <div class="input-wrapper">
+                            <i class="fas fa-user"></i>
+                            <input type="text" id="name" placeholder="Your Name" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="input-wrapper">
+                            <i class="fas fa-envelope"></i>
+                            <input type="email" id="email" placeholder="Your Email" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="input-wrapper">
+                            <i class="fas fa-tag"></i>
+                            <input type="text" id="subject" placeholder="Subject" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="input-wrapper textarea-wrapper">
+                            <i class="fas fa-comment-dots"></i>
+                            <textarea id="message" placeholder="Your Message" rows="5" required></textarea>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-full">
+                        <i class="fas fa-paper-plane"></i> Send Message
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <span class="logo-bracket">&lt;</span>DC<span class="logo-bracket">/&gt;</span>
+                </div>
+                <p class="footer-text">Crafted with <i class="fas fa-heart" style="color: #ef4444;"></i> by Deepak Chandru S</p>
+                <p class="footer-copyright">© 2024 All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
